@@ -73,5 +73,6 @@
     <Build Include="Tablas\MetaSalud.sql" />
     <Build Include="Tablas\TipoMeta.sql" />
     <PostDeploy Include="Scripts\ScriptPosterior.sql" />
+    <Build Include="Tablas\AlimentoConsumido.sql" />
   </ItemGroup>
 </Project>
