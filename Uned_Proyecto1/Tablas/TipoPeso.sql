@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[TipoPeso]
+(
+	[Id] INT NOT NULL IDENTITY(1,1),
+	[Descripcion] VARCHAR(50) NOT NULL,
+	
+	CONSTRAINT PK_Peso PRIMARY KEY(Id)
+)

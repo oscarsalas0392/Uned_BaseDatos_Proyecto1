@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[Genero]
+(
+	[Id] INT NOT NULL IDENTITY(1,1),
+	[Descripcion] INT NOT NULL,
+	CONSTRAINT PK_Genero PRIMARY KEY(Id)
+)
