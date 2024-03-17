@@ -12,6 +12,7 @@
 	[TipoPeso] INT NOT NULL,
 	[Genero] INT NOT NULL,
 	[Foto] VARCHAR(MAX) DEFAULT NULL,
+	[Eliminado] BIT DEFAULT 0,
 
 	CONSTRAINT PK_Usuario PRIMARY KEY(Id),
 	CONSTRAINT FK_Usuario_Genero FOREIGN KEY(Genero) REFERENCES Genero(Id),

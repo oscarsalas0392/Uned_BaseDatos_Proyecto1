@@ -9,6 +9,7 @@
 	[TipoDistancia] INT,
 	[Calorias] INT NOT NULL,
 	[Comentarios] VARCHAR(500),
+	[Eliminado] BIT DEFAULT 0,
 
 	CONSTRAINT PK_ActividadFisica PRIMARY KEY (Id),
 	CONSTRAINT FK_ActividadFisica_Usuario FOREIGN KEY(Usuario) REFERENCES Usuario(Id),

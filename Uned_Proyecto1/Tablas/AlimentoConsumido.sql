@@ -4,6 +4,7 @@
 	[TipoComida] INT NOT NULL,
 	[Dieta] INT NOT NULL,
 	[Descripcion] VARCHAR(100) NOT NULL,
+	[Eliminado] BIT DEFAULT 0,
 	
 	CONSTRAINT PK_AlimentoConsumido PRIMARY KEY(Id),
 	CONSTRAINT FK_AlimentoConsumido_Dieta FOREIGN KEY(Dieta) REFERENCES Dieta(Id),

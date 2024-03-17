@@ -7,6 +7,7 @@
 	[FechaObjectivo] INT NOT NULL,
 	[NivelActividad] VARCHAR(500) NOT NULL,
 	[OjectivoEspecifico] VARCHAR(500),
+	[Eliminado] BIT DEFAULT 0,
 
 	CONSTRAINT PK_MetaSalud PRIMARY KEY(Id),
 	CONSTRAINT FK_MetaSalud_Usuario FOREIGN KEY(Usuario) REFERENCES Usuario(Id),
