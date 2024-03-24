@@ -46,6 +46,7 @@
     <DefineTrace>true</DefineTrace>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
@@ -74,5 +75,8 @@
     <Build Include="Tablas\TipoMeta.sql" />
     <PostDeploy Include="Scripts\ScriptPosterior.sql" />
     <Build Include="Tablas\AlimentoConsumido.sql" />
+    <Build Include="Tablas\Revision.sql" />
+    <Build Include="Tablas\TipoMedida.sql" />
+    <Build Include="Tablas\Medicion.sql" />
   </ItemGroup>
 </Project>

@@ -20,3 +20,6 @@ INSERT INTO TipoDistancia VALUES ('Millas',0)
 INSERT INTO TipoMeta VALUES ('Pérdida de peso',0)
 INSERT INTO TipoMeta VALUES ('Ganancia de músculo',0)
 INSERT INTO TipoMeta VALUES ('Mantenimiento',0)
+
+INSERT INTO TipoMedida VALUES ('Peso',0)
+INSERT INTO TipoMedida VALUES ('Porcentaje de músculo',0)

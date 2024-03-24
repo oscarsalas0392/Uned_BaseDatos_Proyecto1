@@ -8,8 +8,7 @@
 	[FechaNacimiento] DATETIME NOT NULL,
 	[Altura] INT NOT NULL,
 	[TipoAltura] INT NOT NULL,
-	[Peso] INT NOT NULL,
-	[TipoPeso] INT NOT NULL,
+	[Peso] DECIMAL NOT NULL,
 	[Genero] INT NOT NULL,
 	[Foto] VARCHAR(MAX) DEFAULT NULL,
 	[Eliminado] BIT DEFAULT 0,
@@ -17,5 +16,4 @@
 	CONSTRAINT PK_Usuario PRIMARY KEY(Id),
 	CONSTRAINT FK_Usuario_Genero FOREIGN KEY(Genero) REFERENCES Genero(Id),
 	CONSTRAINT FK_Usuario_TipoAltura FOREIGN KEY(TipoAltura) REFERENCES TipoAltura(Id),
-	CONSTRAINT FK_Usuario_TipoPeso FOREIGN KEY(TipoPeso) REFERENCES TipoPeso(Id),
 )
