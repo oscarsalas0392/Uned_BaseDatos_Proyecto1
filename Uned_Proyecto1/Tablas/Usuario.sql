@@ -7,7 +7,7 @@
 	[Nombre] VARCHAR(50) NOT NULL,
 	[FechaNacimiento] DATETIME NOT NULL,
 	[Altura] INT NOT NULL,
-	[Peso] DECIMAL NOT NULL,
+	[Peso] DECIMAL(5,2) NOT NULL,
 	[Genero] INT NOT NULL,
 	[Foto] VARCHAR(MAX) DEFAULT NULL,
 	[Eliminado] BIT DEFAULT 0,
