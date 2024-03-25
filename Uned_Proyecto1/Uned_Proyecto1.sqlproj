@@ -60,7 +60,6 @@
     <Folder Include="Properties" />
     <Folder Include="Tablas" />
     <Folder Include="Scripts" />
-    <Folder Include="Triggers" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tablas\Usuario.sql" />
@@ -79,8 +78,5 @@
     <Build Include="Tablas\TipoMedida.sql" />
     <Build Include="Tablas\BitacoraPeso.sql" />
     <Build Include="Tablas\Alimento.sql" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Triggers\tr_actualizarPeso.sql" />
   </ItemGroup>
 </Project>

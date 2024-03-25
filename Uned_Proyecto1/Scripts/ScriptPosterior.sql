@@ -29,3 +29,14 @@ INSERT INTO TipoComida VALUES ('Almuerzo',0)
 INSERT INTO TipoComida VALUES ('Cena',0)
 INSERT INTO TipoComida VALUES ('Merienda en la mañana',0)
 INSERT INTO TipoComida VALUES ('Merienda en la tarde',0)
+
+GO
+
+  CREATE TRIGGER actualizarPeso ON Usuario AFTER UPDATE
+   AS
+    BEGIN
+	  DECLARE @Peso DECIMAL
+	  DECLARE @Usuario DECIMAL
+	  SELECT @Peso= i.Peso, @Usuario = i.Id  from inserted i
+	  INSERT INTO BitacoraPeso VALUES(@Usuario,@Peso, GETDATE())
+    END
