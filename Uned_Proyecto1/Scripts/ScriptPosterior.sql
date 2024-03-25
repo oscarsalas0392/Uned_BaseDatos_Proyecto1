@@ -23,3 +23,8 @@ INSERT INTO TipoMeta VALUES ('Mantenimiento',0)
 
 INSERT INTO TipoMedida VALUES ('Peso',0)
 INSERT INTO TipoMedida VALUES ('Porcentaje de músculo',0)
+
+INSERT INTO TipoComida VALUES ('Desayuno',0)
+INSERT INTO TipoComida VALUES ('Almuerzo',0)
+INSERT INTO TipoComida VALUES ('Cena',0)
+INSERT INTO TipoComida VALUES ('Merienda',0)

@@ -1,9 +1,9 @@
 ﻿CREATE TABLE [dbo].[MetaSalud]
 (
 	[Id] INT NOT NULL IDENTITY(1,1),
-	[Revision] INT NOT NULL,
+	[Usuario] INT NOT NULL,
 	[TipoMeta] INT NOT NULL,
-	[PesoObjectivo] DECIMAL NOT NULL,
+	[PesoObjectivo] DECIMAL(5,2)  NOT NULL,
 	[FechaObjectivo] DATETIME NOT NULL,
 	[NivelActividad] VARCHAR(500) NOT NULL,
 	[OjectivoEspecifico] VARCHAR(500),
@@ -11,5 +11,5 @@
 
 	CONSTRAINT PK_MetaSalud PRIMARY KEY(Id),
 	CONSTRAINT FK_MetaSalud_TipoMeta FOREIGN KEY(TipoMeta) REFERENCES TipoMeta(Id),
-	CONSTRAINT FK_MetaSalud_Revision FOREIGN KEY(Revision) REFERENCES Revision(Id),
+	CONSTRAINT FK_MetaSalud_Usuario FOREIGN KEY(Usuario) REFERENCES Usuario(Id),
 )
