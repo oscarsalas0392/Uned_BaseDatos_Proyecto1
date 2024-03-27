@@ -37,6 +37,7 @@ GO
     BEGIN
 	  DECLARE @Peso DECIMAL
 	  DECLARE @Usuario DECIMAL
-	  SELECT @Peso= i.Peso, @Usuario = i.Id  from inserted i
-	  INSERT INTO BitacoraPeso VALUES(@Usuario,@Peso, GETDATE())
+	  DECLARE @TipoPeso DECIMAL
+	  SELECT @Peso= i.Peso, @Usuario = i.Id, @TipoPeso = I.TipoPeso  from inserted i
+	  INSERT INTO BitacoraPeso VALUES(@Usuario,@Peso,@TipoPeso,GETDATE())
     END
