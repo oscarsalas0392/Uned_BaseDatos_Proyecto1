@@ -3,6 +3,7 @@
 	[Id] INT NOT NULL IDENTITY(1,1),
 	[Usuario] INT NOT NULL,
 	[TipoActividadFisica] INT NOT NULL,
+	[Fecha] DATETIME,
 	[Duracion] INT NOT NULL,
 	[Distancia] DECIMAL(5,2),
 	[TipoDistancia] INT,
