@@ -39,5 +39,30 @@ GO
 	  DECLARE @Usuario DECIMAL
 	  DECLARE @TipoPeso DECIMAL
 	  SELECT @Peso= i.Peso, @Usuario = i.Id, @TipoPeso = I.TipoPeso  from inserted i
-	  INSERT INTO BitacoraPeso VALUES(@Usuario,@Peso,@TipoPeso,GETDATE())
+	  INSERT INTO BitacoraPeso VALUES(@Usuario,@Peso,@TipoPeso,GETDATE(),0)
     END
+GO
+
+ CREATE TRIGGER [dbo].[actualizarCalorias] ON [dbo].[AlimentoConsumido] AFTER INSERT,UPDATE
+   AS
+    BEGIN
+	  DECLARE @Calorias INT
+	  DECLARE @Dieta INT
+
+	  SELECT @Calorias=MAX(V1.Calorias),@Dieta= V1.Dieta FROM (
+	  SELECT SUM(a.Calorias) as Calorias,ac.Dieta,ac.Opcion FROM AlimentoConsumido ac
+	  INNER JOIN Alimento  a
+	  ON ac.Alimento = a.Id
+	  INNER JOIN inserted i
+	  on ac.Dieta = i.Dieta
+	  WHERE ac.Eliminado = 0 
+	  GROUP BY ac.Dieta,ac.Opcion
+	  ) V1
+	  GROUP BY (V1.Dieta)
+
+	
+	 UPDATE Dieta SET Calorias = @Calorias
+	 WHERE Id = @Dieta
+
+	
+   END
