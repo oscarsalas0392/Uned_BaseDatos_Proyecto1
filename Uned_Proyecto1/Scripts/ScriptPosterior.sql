@@ -30,6 +30,10 @@ INSERT INTO TipoComida VALUES ('Cena',0)
 INSERT INTO TipoComida VALUES ('Merienda en la mañana',0)
 INSERT INTO TipoComida VALUES ('Merienda en la tarde',0)
 
+INSERT INTO Alimento VALUES ('1/3 de arroz',60,0)
+INSERT INTO Alimento VALUES ('1 manzana mediana',20,0)
+INSERT INTO Alimento VALUES ('1 banano grande',30,0)
+
 GO
 
   CREATE TRIGGER actualizarPeso ON Usuario AFTER UPDATE
